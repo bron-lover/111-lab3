@@ -10,7 +10,7 @@ make
 
 ## Running
 
-To run, you run the command:
+After building, simply run the command:
 ./hash-table-tester -t [# of threads] -s [# of insertions per thread]
 
 Example:
@@ -26,6 +26,8 @@ Hash table v1: 2,228,849 usec
 Hash table v2: 437,942 usec
   - 0 missing
 ```
+
+\*Missing: how many inserted keys were missing (due to a race condition)
 
 ## First Implementation
 
