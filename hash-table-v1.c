@@ -106,6 +106,14 @@ void hash_table_v1_add_entry(struct hash_table_v1 *hash_table,
 	if (list_entry != NULL)
 	{
 		list_entry->value = value;
+
+		// Unlock the mutex
+		error = pthread_mutex_unlock(&hash_table->mutex);
+		if (error != 0)
+		{
+			exit(error);
+		}
+
 		return;
 	}
 
