@@ -115,7 +115,7 @@ void hash_table_v1_add_entry(struct hash_table_v1 *hash_table,
 	SLIST_INSERT_HEAD(list_head, list_entry, pointers);
 
 	// Unlock the mutex
-	uint32_t error = pthread_mutex_unlock(&hash_table->mutex);
+	error = pthread_mutex_unlock(&hash_table->mutex);
 	if (error != 0)
 	{
 		exit(error);
